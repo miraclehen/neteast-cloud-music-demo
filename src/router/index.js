@@ -13,57 +13,78 @@ const routes = [
   {
     path: '/topplaylists',
     name: 'TopPlayLists',
-    component: () => import(/* webpackChunkName: "topplaylists" */ '../views/TopPlayLists.vue')
+    component: () =>
+      import(/* webpackChunkName: "topplaylists" */ '../views/TopPlayLists.vue')
   },
   {
     path: '/playlist',
     name: 'Playlist',
-    component: () => import(/* webpackChunkName: "topplaylists" */ '../views/TopPlayLists.vue')
+    component: () =>
+      import(/* webpackChunkName: "topplaylists" */ '../views/TopPlayLists.vue')
   },
   {
     path: '/playlistdetail',
     name: 'PlaylistDetail',
-    component: () => import(/* webpackChunkName: "playlistdetail" */ '../views/PlaylistDetail.vue')
+    component: () =>
+      import(
+        /* webpackChunkName: "playlistdetail" */ '../views/PlaylistDetail.vue'
+      )
   },
   {
     path: '/topartist',
     name: 'TopArtist',
-    component: () => import(/* webpackChunkName: "topartist" */ '../views/TopArtist.vue')
+    component: () =>
+      import(/* webpackChunkName: "topartist" */ '../views/TopArtist2.vue')
   },
   {
     path: '/newalbum',
     name: 'NewAlbum',
-    component: () => import(/* webpackChunkName: "newalbum" */ '../views/NewAlbum.vue')
+    component: () =>
+      import(/* webpackChunkName: "newalbum" */ '../views/NewAlbum.vue')
   },
   {
     path: '/artist',
     name: 'Artist',
-    component: () => import(/* webpackChunkName: "artist" */ '../views/Artist.vue')
+    component: () =>
+      import(/* webpackChunkName: "artist" */ '../views/Artist.vue')
   },
   {
     path: '/artist/albums',
     name: 'ArtistAlbums',
-    component: () => import(/* webpackChunkName: "artistalbums" */ '../views/ArtistAlbums.vue')
+    component: () =>
+      import(/* webpackChunkName: "artistalbums" */ '../views/ArtistAlbums.vue')
   },
   {
     path: '/album',
     name: 'AlbumDetail',
-    component: () => import(/* webpackChunkName: "albumdetail" */ '../views/AlbumDetail.vue')
+    component: () =>
+      import(/* webpackChunkName: "albumdetail" */ '../views/AlbumDetail.vue')
   },
   {
     path: '/setting',
     name: 'Setting',
-    component: () => import(/* webpackChunkName: "setting" */ '../views/Setting.vue')
+    component: () =>
+      import(/* webpackChunkName: "setting" */ '../views/Setting.vue')
   },
   {
     path: '/search',
     name: 'Search',
-    component: () => import(/* webpackChunkName: "search" */ '../views/Search.vue')
+    component: () =>
+      import(/* webpackChunkName: "search" */ '../views/Search.vue')
   },
   {
     path: '/search/music',
     name: 'SearchMusic',
-    component: () => import(/* webpackChunkName: "search" */ '../views/SearchMusic.vue')
+    component: () =>
+      import(/* webpackChunkName: "search" */ '../views/SearchMusic.vue')
+  },
+  {
+    path: '/recommenddailysongs',
+    name: 'RecommendDailySongs',
+    component: () =>
+      import(
+        /* webpackChunkName: "RecommendDailySongs" */ '../views/DailyRecommend.vue'
+      )
   },
   {
     path: '*',

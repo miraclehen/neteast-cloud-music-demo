@@ -16,7 +16,7 @@ export default {
     }
   },
   actions: {
-    fetchTopArtists: async (state) => {
+    fetchTopArtists: async state => {
       try {
         const artist = await getAllTopArtists()
         store.commit('artist/setTopArtists', artist.artists)
@@ -36,10 +36,10 @@ export default {
     }
   },
   getters: {
-    getTopArtists: (state) => {
+    getTopArtists: state => {
       return state.topArtists
     },
-    getArtist: (state) => {
+    getArtist: state => {
       return state.artist
     }
   }

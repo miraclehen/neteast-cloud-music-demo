@@ -1,19 +1,16 @@
 <template>
-  <v-container class="pt-0 mb-8 pb-sm-12">
+  <v-container>
     <v-row>
-      <v-col cols="12">
-        <!-- Loading progress bar -->
-        <Loading v-if="!getTopArtist" />
-
-        <!-- artists -->
-        <div v-if="getTopArtist" class="headline mb-2 text-center">
+      <v-col>
+        <Loading v-if="!getTopArtists" />
+        <div v-if="getTopArtists" class="headline mb-2 text-center">
           Hot Artists
         </div>
-        <v-row no-gutters v-if="getTopArtist">
+        <v-row no-gutters v-if="getTopArtists">
           <v-col
-            v-for="artist in getTopArtist"
+            v-for="artist in getTopArtists"
             :key="artist.id"
-            class="ma-0 py-0 px-0 px-sm-2"
+            class="ma-0 pa-0 px-sm-2"
             xs="12"
             sm="6"
             md="4"
@@ -38,7 +35,6 @@
 import { mapGetters } from 'vuex'
 import Loading from '../components/Loading'
 import ArtistItem from '../components/Common/ArtistItem4'
-
 export default {
   components: {
     Loading,
@@ -49,15 +45,9 @@ export default {
   },
   computed: {
     ...mapGetters({
-      getTopArtist: 'artist/getTopArtists'
+      getTopArtists: 'artist/getTopArtists'
     })
   },
-  methods: {
-    goToArtist(id) {
-      this.$router.push(`/artist?id=${id}`)
-    }
-  }
+  methods: {}
 }
 </script>
-
-<style scoped></style>

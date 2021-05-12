@@ -6,8 +6,7 @@
     ripple
   >
     <v-img
-      class="white--text align-end"
-      height="10rem"
+      height="20rem"
       width="100%"
       :src="picUrl + '?param=400y400'"
       :alt="name"
@@ -34,7 +33,7 @@ export default {
       type: String
     },
     picUrl: {
-      type: String
+      type: Number
     },
     musicSize: {
       type: Number
@@ -43,5 +42,7 @@ export default {
       type: Number
     }
   }
-};
+}
 </script>
+
+<style></style>
