@@ -23,14 +23,14 @@
 </template>
 
 <script>
-import { mdiPlaylistPlus, mdiPlayCircleOutline } from "@mdi/js";
+import { mdiPlaylistPlus, mdiPlayCircleOutline } from '@mdi/js'
 
 export default {
   data() {
     return {
       mdiPlaylistPlus,
       mdiPlayCircleOutline
-    };
+    }
   },
   props: {
     id: {
@@ -44,8 +44,8 @@ export default {
     },
     album: {
       type: String,
-      default: ""
+      default: ''
     }
   }
-};
+}
 </script>

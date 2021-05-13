@@ -161,7 +161,18 @@ const getDailyRecommendSongs = () =>
     .then(response => response.data)
     .catch(error => console.log(error))
 
+// 获取精品歌单
+const getHignQualityPlaylist = () =>
+  axios
+    .get(`${process.env.VUE_APP_baseURL}/top/playlist/highquality`)
+    .then(response => {
+      console.log(response)
+      return response.data.playlists
+    })
+    .catch(error => console.log(error))
+
 export {
+  getHignQualityPlaylist,
   getDailyRecommendSongs,
   getPlayLists,
   getAllPlayListTags,

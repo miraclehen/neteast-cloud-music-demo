@@ -5,6 +5,7 @@ import artist from './modules/artist'
 import search from './modules/search'
 import album from './modules/album'
 import recommend from './modules/recommend'
+import playList from './modules/playList'
 
 import {
   getPlayLists,
@@ -133,6 +134,7 @@ export default new Vuex.Store({
     artist,
     search,
     album,
-    recommend
+    recommend,
+    playList
   }
 })

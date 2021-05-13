@@ -51,7 +51,8 @@ import {
   mdiPlaylistMusic,
   mdiAlbum,
   mdiAccountMusic,
-  mdiCalendarCursor
+  mdiCalendarCursor,
+  mdiPlaylistCheck
 } from '@mdi/js'
 export default {
   data() {
@@ -63,6 +64,11 @@ export default {
       mdiAccountMusic,
       item: 2,
       items: [
+        {
+          icon: mdiPlaylistCheck,
+          text: '歌单广场',
+          url: '/playlistcenter'
+        },
         {
           icon: mdiCalendarCursor,
           text: '每日推荐',

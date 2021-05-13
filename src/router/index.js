@@ -87,6 +87,14 @@ const routes = [
       )
   },
   {
+    path: '/playlistcenter',
+    name: 'PlaylistCenter',
+    component: () =>
+      import(
+        /* webpackChunkName: "RecommendDailySongs" */ '../views/PlaylistCenter.vue'
+      )
+  },
+  {
     path: '*',
     redirect: '/'
   }
