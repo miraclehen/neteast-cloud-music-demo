@@ -2,26 +2,24 @@
   <v-card
     height="100%"
     @click.stop="$emit('setMusic', id)"
-    class="ma-0 cursor-pointer card-hover"
     flat
+    class="ma-0 cursor-pointer card-hover"
   >
     <div>
-      <!-- cover image -->
       <v-img
         lazy-src="../../assets/default_cover.png"
         min-height="120"
         :src="httpToHttps(imgUrl) + '?param=100y100'"
-      ></v-img>
+      >
+      </v-img>
 
-      <!-- music name -->
       <div class="mt-2 body-2 text-truncate text-center">
         {{ name }}
       </div>
 
-      <!-- music artist -->
       <div
         class="caption text-truncate text--secondary text-center"
-        style="max-width: 170px;"
+        style="max-width: 170px"
       >
         {{ artist }}
       </div>
@@ -30,12 +28,10 @@
 </template>
 
 <script>
-import { mdiPlaylistPlus } from '@mdi/js'
 import { httpToHttps } from '../../utils/helper'
 export default {
   data() {
     return {
-      mdiPlaylistPlus,
       httpToHttps
     }
   },
@@ -58,17 +54,18 @@ export default {
     },
     maxItem: {
       type: Number,
-      default: 9999
+      default: 999
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
 .card-hover {
-  transition: 0.1s ease-in-out;
+  transition: 0.15 ease-in-out;
 }
 .card-hover:hover {
   box-shadow: inset 0 0 0 10em rgba(255, 255, 255, 0.2);
+  background-color: red;
 }
 </style>
